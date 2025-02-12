@@ -1,0 +1,229 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: linear-gradient(45deg, #320715, #7c1424, #fda0b6, #ffebef);
+  background-size: 300% 300%;
+  animation: color 50s ease-in-out infinite;
+}
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+.lovebox{
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  animation: pulse 2s infinite ease-in-out, wiggle 4s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+
+.bacconv{
+  width: 320px;
+  height: 200px;
+  box-shadow:10px 10px 25px #1d2e34;
+  background: #df6d89;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-bottom: 100px solid #df6d89;
+  position: relative;
+  top: 0;
+}
+.letter {
+  width: 280px;
+  height: 200px;
+  background: #ebcabd;
+  position: relative;
+  top: -205px;
+  box-shadow: 6px 6px 25px #1d2e34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.00s ease-in-out;
+}
+.letter.raised {
+  transform: translateY(-150px); 
+}
+.boxtext {
+  width: 260px;
+  height: 180px;
+  border: dashed 3px #1d2e34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+h1{
+    text-align:center;
+    color:#1d2e34;
+    font-family:"Dancing Script", serif;
+    text-shadow:5px 5px 5px #d0a690;
+}
+
+#heart{
+  font-size:50px;
+  color:#9e0000;
+  text-shadow:5px 5px 5px #d0a690;
+  margin-top: -5px;
+}
+h2{font-size:15px;
+  text-align:center;
+  color:#1d2e34;
+  font-family: "Kurale", serif;
+  text-shadow:5px 5px 5px #d0a690;
+   margin-top: -80px;
+}
+.right-triangle {
+  border-left: 320px solid transparent;
+  border-bottom: 205px solid #f9809f;
+  position: absolute;
+  margin-top: -100px;
+}
+.left-triangle {
+  border-right: 320px solid transparent;
+  border-bottom: 205px solid #f99ab2;
+  position: absolute;
+  margin-top: -100px;
+  left: 10;
+}
+.but {
+  width: 150px;
+  height: 45px;
+  background: #e67995;
+  box-shadow: 10px 10px 25px #1d2e34;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.3s ease; 
+  position: relative;
+  z-index: 10;
+}
+
+.but:hover {
+  background: #b84c67;
+  font-style: italic; 
+}
+.butbox .but {
+  transition: transform 0.5s ease-in-out;
+}
+#th{
+  z-index: 0;
+}
+.text{
+  width: 420px;
+  height: 40px;
+  background: #e67995;
+  tex-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  margin-top: -180px;
+  box-shadow:10px 10px 25px #1d2e34;
+  text-shadow:5px 5px 5px #b95f76;
+}
+.butbox{
+  width: 420px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.music-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color:#e67995;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.music-button:hover {
+  background-color: #d6405b;
+  transform: scale(1.1);
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  color: #cc0000;
+  font-size: 30px;
+  animation: flyUp 20s linear forwards;
+}
